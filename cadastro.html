@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro — Rede Solidária</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rede Solidária — portal fictício de ONG para apresentação institucional, projetos e cadastro.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header role="banner">
+  <div class="container">
+    <div class="brand" aria-label="Identidade do site">Rede Solidária</div>
+    <nav aria-label="Menu principal">
+      <a href="index.html">Início</a>
+      <a href="projetos.html">Projetos</a>
+      <a href="cadastro.html">Cadastro</a>
+    </nav>
+  </div>
+</header>
+<main class="container" role="main">
+
+<h1>Cadastro de Participante</h1>
+<p>Preencha para se cadastrar como voluntário, doador ou visitante.</p>
+
+<form action="#" method="post" novalidate aria-describedby="instrucao">
+  <p id="instrucao">Campos marcados com * são obrigatórios.</p>
+
+  <fieldset>
+    <legend>Dados pessoais</legend>
+
+    <label for="nome">Nome completo *</label>
+    <input id="nome" name="nome" type="text" required autocomplete="name" placeholder="Seu nome completo">
+
+    <label for="email">E-mail *</label>
+    <input id="email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="Digite seu e-mail">
+
+    <label for="cpf">CPF *</label>
+    <input id="cpf" name="cpf" type="text" required inputmode="numeric" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}|\d{11}" placeholder="000.000.000-00" aria-describedby="ajuda-cpf">
+    <small id="ajuda-cpf">Aceita 000.000.000-00 ou 11 dígitos.</small>
+
+    <label for="tel">Telefone *</label>
+    <input id="tel" name="telefone" type="tel" required inputmode="tel" pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" placeholder="(11) 90000-0000" aria-describedby="ajuda-tel">
+    <small id="ajuda-tel">Formato: (DD) 90000-0000.</small>
+
+    <label for="nasc">Data de Nascimento *</label>
+    <input id="nasc" name="nascimento" type="date" required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Endereço</legend>
+
+    <label for="endereco">Endereço *</label>
+    <input id="endereco" name="endereco" type="text" required placeholder="Rua, número e complemento" autocomplete="address-line1">
+
+    <label for="cidade">Cidade *</label>
+    <input id="cidade" name="cidade" type="text" required autocomplete="address-level2">
+
+    <label for="estado">Estado *</label>
+    <select id="estado" name="estado" required autocomplete="address-level1">
+      <option value="" selected disabled>Selecione</option>
+      <option>AC</option>
+      <option>AL</option>
+      <option>AP</option>
+      <option>AM</option>
+      <option>BA</option>
+      <option>CE</option>
+      <option>DF</option>
+      <option>ES</option>
+      <option>GO</option>
+      <option>MA</option>
+      <option>MT</option>
+      <option>MS</option>
+      <option>MG</option>
+      <option>PA</option>
+      <option>PB</option>
+      <option>PR</option>
+      <option>PE</option>
+      <option>PI</option>
+      <option>RJ</option>
+      <option>RN</option>
+      <option>RS</option>
+      <option>RO</option>
+      <option>RR</option>
+      <option>SC</option>
+      <option>SP</option>
+      <option>SE</option>
+      <option>TO</option>
+    </select>
+
+    <label for="cep">CEP *</label>
+    <input id="cep" name="cep" type="text" required inputmode="numeric" pattern="\d{5}-\d{3}|\d{8}" placeholder="00000-000" aria-describedby="ajuda-cep">
+    <small id="ajuda-cep">Aceita 00000-000 ou 8 dígitos.</small>
+  </fieldset>
+
+  <fieldset>
+    <legend>Preferências</legend>
+    <label for="perfil">Como deseja participar?</label>
+    <select id="perfil" name="perfil">
+      <option>Voluntário</option>
+      <option>Doador</option>
+      <option>Visitante</option>
+    </select>
+
+    <label for="mensagem">Interesses</label>
+    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva seus interesses"></textarea>
+  </fieldset>
+
+  <button type="submit">Enviar cadastro</button>
+</form>
+
+<section class="card" aria-labelledby="multimidia">
+  <h2 id="multimidia">Multimídia</h2>
+  <p>Vídeo institucional (exemplo para cumprir o requisito de multimídia):</p>
+  <figure>
+    <iframe title="Vídeo institucional (exemplo)" width="560" height="315"
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ" loading="lazy" allowfullscreen></iframe>
+    <figcaption>Incorporação de vídeo como demonstração.</figcaption>
+  </figure>
+</section>
+
+</main>
+<footer role="contentinfo">
+  <div class="container">
+    <p><strong>Rede Solidária</strong> — projeto acadêmico (ONG fictícia).</p>
+    <p>Contato: <a href="mailto:contato@redesolidaria.org" style="color:#fff">contato@redesolidaria.org</a></p>
+  </div>
+</footer>
+</body>
+</html>
